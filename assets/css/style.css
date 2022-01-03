@@ -1,4 +1,8 @@
-html {
-  background-color: red;
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#logo h1 {
+  font-family: 'Shrikhand', cursive;
 }
 /*# sourceMappingURL=style.css.map */

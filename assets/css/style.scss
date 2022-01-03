@@ -1,6 +1,9 @@
-$background_theme: black;
-$background_themeSecond: red;
 
-html {
-    background-color: $background_themeSecond;
+body {
+    font-family: 'Roboto', sans-serif;
+}
+#logo {
+    h1 {
+        font-family: 'Shrikhand', cursive;
+    }
 }
