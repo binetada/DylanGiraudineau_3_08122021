@@ -1,8 +1,108 @@
-body {
+html {
+  width: 100%;
+  overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
 }
 
-#logo h1 {
+html body {
+  color: #000;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header #logo h1 {
   font-family: 'Shrikhand', cursive;
+  color: #000;
+  font-weight: bold;
+}
+
+form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+  background-color: #EAEAEA;
+  -webkit-box-shadow: 0 4px 4px inset #c0c0c0;
+          box-shadow: 0 4px 4px inset #c0c0c0;
+}
+
+form .icon_map {
+  margin-right: 10px;
+}
+
+form input {
+  background-color: transparent;
+  border: 0;
+  font-weight: bold;
+}
+
+.slogan {
+  width: 100%;
+  background-color: #F6F6F6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 40px 15px 40px 15px;
+}
+
+.slogan h2 {
+  font-weight: bold;
+}
+
+.slogan p {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.slogan .btn {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+  padding: 15px;
+  font-size: 15px;
+  border: 0;
+  color: whitesmoke;
+  max-width: 300px;
+  -webkit-box-shadow: #a5a5a5 0 5px 10px;
+          box-shadow: #a5a5a5 0 5px 10px;
+}
+
+.slogan .btn:hover {
+  background: linear-gradient(356deg, #a16be0 0%, #a16be0 33%, #ff93e1 88%, #ff93e1 100%);
+  -webkit-box-shadow: #4b4b4b 0 5px 10px;
+          box-shadow: #4b4b4b 0 5px 10px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.restaurants img {
+  width: 50%;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,9 +1,78 @@
-
-body {
+html {
+    width: 100%;
+    overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
+        body {
+            color: #000;
+            margin: auto;
+        }
 }
-#logo {
-    h1 {
-        font-family: 'Shrikhand', cursive;
+a {
+    text-decoration: none;
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+        #logo {
+            h1 {
+                font-family: 'Shrikhand', cursive;
+                color: #000;
+                font-weight: bold;
+        }
+    }
+}
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: #EAEAEA;
+    box-shadow: 0 4px 4px inset #c0c0c0;
+        .icon_map {
+            margin-right: 10px;
+        }
+            input {
+                background-color: transparent;
+                border: 0;
+                font-weight: bold;
+            }
+}
+.slogan {
+    width: 100%;
+    background-color: #F6F6F6;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 15px 40px 15px;
+        h2 {
+            font-weight: bold;
+        }
+        p {
+            font-size: 18px;
+            font-weight: 100
+        }
+        .btn {
+            background-image: linear-gradient(#FF79DA, #9356DC);
+            border-radius: 25px;
+            padding: 15px;
+            font-size: 15px;
+            border: 0;
+            color: whitesmoke;
+            max-width: 300px;
+            box-shadow: #a5a5a5 0 5px 10px;
+
+            &:hover {
+                background: linear-gradient(356deg, #a16be0 0%, #a16be0 33%, #ff93e1 88%, #ff93e1 100%);
+                box-shadow: #4b4b4b 0 5px 10px;
+                transition: 0.5s ease-in-out;
+            }
+        }
+}
+.restaurants {
+    img {
+        width: 50%;
     }
 }
