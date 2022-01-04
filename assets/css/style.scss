@@ -12,9 +12,11 @@ a {
 }
 header {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    padding: 15px;
         #logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             h1 {
                 font-family: 'Shrikhand', cursive;
                 color: #000;
