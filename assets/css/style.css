@@ -51,7 +51,7 @@ a {
   color: #000;
 }
 
-ul {
+li {
   list-style-type: none;
 }
 
@@ -137,6 +137,7 @@ form input {
 
 /*fontionnement du site*/
 .function {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,16 +148,12 @@ form input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   font-size: 18px;
   border: 1px solid transparent;
 }
 
 .function h2 {
   width: 100%;
-  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -167,24 +164,21 @@ form input {
 }
 
 .function ul {
-  width: 95%;
   border: 1px solid transparent;
 }
 
 .function ul li {
   border: 1px solid transparent;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 70px;
+  padding: 25px;
   border-radius: 15px;
-  margin: 15px 0 15px 0;
+  margin-bottom: 15px;
+  margin-left: -35px;
   background: #f2f2f2;
   -webkit-box-shadow: #a5a5a5 0 5px 10px;
           box-shadow: #a5a5a5 0 5px 10px;
@@ -206,13 +200,11 @@ form input {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  border: solid;
   background: #9356DC;
   padding: 5px 10px 5px 10px;
-  margin: 0 15px 0 0;
+  margin-right: 15px;
+  margin-left: -35px;
   color: whitesmoke;
-  position: relative;
-  left: -10px;
 }
 
 .function ul li i {
@@ -230,11 +222,11 @@ form input {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #f2f2f2;
+  border: 1px solid transparent;
 }
 
 .restaurants .restaurant_card {
   width: 100%;
-  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -252,7 +244,7 @@ form input {
 
 .restaurants .restaurant_card img {
   width: 100%;
-  height: 70%;
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px 15px 0 0;
@@ -289,18 +281,17 @@ form input {
   -ms-flex-item-align: end;
       align-self: flex-end;
   background-color: #99E2D0;
-  padding: 10px 20px 10px 20px;
   border-radius: 5px;
   color: #5f867c;
   font-weight: bold;
   font-size: 18px;
   position: absolute;
   margin: 15px;
+  padding: 0px 10px;
 }
 
 /*footer*/
 footer {
-  padding: 20px;
   background-color: #2e2e2e;
   z-index: 2;
 }
@@ -315,7 +306,7 @@ footer .btn_index {
 }
 
 footer li {
-  margin: 15px 0 15px 0;
+  margin: 10px 0 10px 0;
 }
 
 footer li i {
