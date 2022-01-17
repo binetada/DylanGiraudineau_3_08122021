@@ -1,43 +1,42 @@
 @charset "UTF-8";
-/*élements principaux et intégration des polices */
+/* modifications des propritétés par défaut */
+html body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html body a {
+  text-decoration: none;
+}
+
+html body li {
+  list-style-type: none;
+}
+
+/*intégration des polices et des couleurs */
 html {
   font-family: "Roboto", sans-serif;
 }
 
 html body {
   color: #000;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
-html body footer .btn_index {
+html body a {
+  color: #000;
+}
+
+html body header, html body .menu_title, html body .btn_index {
   font-family: "Shrikhand", cursive;
 }
 
-@media (min-width: 992px) {
-  .main_index {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  #restaurants_container {
-    padding-left: 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  #restaurants_container .width_desktopCard {
-    width: 165%;
-  }
-  #restaurants_container .width_desktopCard .width_desktop {
-    width: 100%;
-  }
+html body footer a {
+  color: white;
 }
 
-/*initialisation des boutons*/
-.btn, .slogan .btn_explore, .btn_order {
+/*intégration des boutons*/
+/*déclaration des variables*/
+.btn, .btn_explore, .btn_order {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(#ff79da, #9356dc);
   border-radius: 25px;
@@ -50,51 +49,12 @@ html body footer .btn_index {
           box-shadow: #a5a5a5 0 5px 10px;
 }
 
-.btn:hover, .slogan .btn_explore:hover, .btn_order:hover {
+.btn:hover, .btn_explore:hover, .btn_order:hover {
   background: linear-gradient(356deg, #a16be0 0%, #a16be0 33%, #ff93e1 88%, #ff93e1 100%);
   -webkit-box-shadow: #4b4b4b 0 5px 10px;
           box-shadow: #4b4b4b 0 5px 10px;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-}
-
-/* modifications des propritétés par défaut */
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-li {
-  list-style-type: none;
-}
-
-/*header*/
-header {
-  font-family: "Shrikhand", cursive;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header .link_logo {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-header .index_back {
-  font-size: 26px;
 }
 
 /*formulaire de recherche*/
@@ -123,7 +83,82 @@ form input {
   font-weight: bold;
 }
 
-/*slogan et bouton explorer*/
+/*déclaration des variables*/
+/*header*/
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .link_logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .index_back {
+  font-size: 26px;
+}
+
+/*footer*/
+footer {
+  background-color: #2e2e2e;
+  z-index: 2;
+}
+
+footer a {
+  font-size: 15px;
+  color: whitesmoke;
+}
+
+footer .btn_index {
+  font-size: 20px;
+}
+
+footer li {
+  margin: 10px 0 10px 0;
+}
+
+footer li i {
+  margin-right: 15px;
+}
+
+/*déclaration des variables*/
+@media (min-width: 992px) {
+  .main_index {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #restaurants_container {
+    padding-left: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #restaurants_container .width_desktopCard {
+    width: 165%;
+  }
+  #restaurants_container .width_desktopCard .width_desktop {
+    width: 100%;
+  }
+}
+
+/*slogan*/
 .slogan {
   border: 1px solid transparent;
   width: 100%;
@@ -341,7 +376,6 @@ form input {
 }
 
 .menu .menu_title {
-  font-family: "Shrikhand", cursive;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -411,28 +445,5 @@ form input {
 .container ul li .li_check .fa-check-circle {
   font-size: 25px;
   color: white;
-}
-
-/*footer*/
-footer {
-  background-color: #2e2e2e;
-  z-index: 2;
-}
-
-footer a {
-  font-size: 15px;
-  color: whitesmoke;
-}
-
-footer .btn_index {
-  font-size: 20px;
-}
-
-footer li {
-  margin: 10px 0 10px 0;
-}
-
-footer li i {
-  margin-right: 15px;
 }
 /*# sourceMappingURL=style.css.map */
