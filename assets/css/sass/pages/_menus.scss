@@ -1,4 +1,16 @@
 /*pages menus restaurants*/
+@media (min-width: 992px) {
+	.container {
+		display: flex;
+		justify-content: space-around;
+		ul {
+			width: 100%;
+		li {
+			width: 100%;
+		}
+		}
+	}
+}
 .banner {
 	height: 300px;
 	img {
@@ -65,17 +77,24 @@
 		margin-bottom: 15px;
 		border-radius: 15px;
 		&:hover .li_check {
-		  display: block;
-		  animation: check 0.5s ease-in-out;
-		  animation-fill-mode: both;
-		  cursor: pointer;
+		  	width: 25px;
+		  	background-color: $tertiary;
+		  	cursor: pointer;
+			margin-left: 45px; 
+		}
+		&:hover .fa-check-circle {
+			transform: rotate(360deg);
 		}
   
 		.li_content {
 		  width: 100%;
+		  white-space: nowrap;
+		  overflow: hidden;
+		  text-overflow: ellipsis;
 		  h4 {
 			font-size: 18px;
 			font-weight: normal;
+		
 		  }
 		  p {
 			font-weight: 100;
@@ -86,19 +105,18 @@
 		  height: 75px;
 		  padding-top: 50px;
 		  padding-right: 15px;
+		  margin-right: -45px;
 		}
 		.li_check {
+		  width: 0px;
 		  border-radius: 0 15px 15px 0;
-		  border: 1px solid $tertiary;
-		  background-color: $tertiary;
+		  background-color: transparent;
 		  padding: 25px;
-		  display: none;
-		  animation: checkout 0.5s ease-in-out;
-		  animation-fill-mode: both;
-  
+		  transition: width 0.5s;
 		  .fa-check-circle {
 			font-size: 25px;
 			color: white;
+			transition: transform 0.5s;
 		  }
 		}
 	  }

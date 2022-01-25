@@ -362,6 +362,22 @@ footer li i {
 }
 
 /*pages menus restaurants*/
+@media (min-width: 992px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .container ul {
+    width: 100%;
+  }
+  .container ul li {
+    width: 100%;
+  }
+}
+
 .banner {
   height: 300px;
 }
@@ -462,16 +478,22 @@ footer li i {
 }
 
 .container ul li:hover .li_check {
-  display: block;
-  -webkit-animation: check 0.5s ease-in-out;
-          animation: check 0.5s ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  width: 25px;
+  background-color: #99e2d0;
   cursor: pointer;
+  margin-left: 45px;
+}
+
+.container ul li:hover .fa-check-circle {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .container ul li .li_content {
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .container ul li .li_content h4 {
@@ -488,23 +510,25 @@ footer li i {
   height: 75px;
   padding-top: 50px;
   padding-right: 15px;
+  margin-right: -45px;
 }
 
 .container ul li .li_check {
+  width: 0px;
   border-radius: 0 15px 15px 0;
-  border: 1px solid #99e2d0;
-  background-color: #99e2d0;
+  background-color: transparent;
   padding: 25px;
-  display: none;
-  -webkit-animation: checkout 0.5s ease-in-out;
-          animation: checkout 0.5s ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
 }
 
 .container ul li .li_check .fa-check-circle {
   font-size: 25px;
   color: white;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .container,
