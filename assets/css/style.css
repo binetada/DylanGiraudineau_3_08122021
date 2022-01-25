@@ -57,6 +57,14 @@ html body footer a {
   transition: 0.5s ease-in-out;
 }
 
+.btn_order {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 /*formulaire de recherche*/
 form {
   border: 1px solid transparent;
@@ -81,6 +89,7 @@ form input {
   background-color: transparent;
   border: 0;
   font-weight: bold;
+  font-size: 18px;
 }
 
 /*déclaration des variables*/
@@ -109,13 +118,17 @@ header .link_logo {
 }
 
 header .index_back {
-  font-size: 26px;
+  font-size: 20px;
+  padding-left: 10px;
 }
 
 /*footer*/
 footer {
   background-color: #2e2e2e;
   z-index: 2;
+  padding-top: 25px;
+  padding-left: 15px;
+  padding-bottom: 25px;
 }
 
 footer a {
@@ -128,7 +141,7 @@ footer .btn_index {
 }
 
 footer li {
-  margin: 10px 0 10px 0;
+  margin: 10px 0 10px -35px;
 }
 
 footer li i {
@@ -138,31 +151,38 @@ footer li i {
 /*déclaration des variables*/
 @media (min-width: 992px) {
   .main_index {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  #restaurants_container {
-    padding-left: 50px;
+  .main_index #desktop_flex {
+    width: 50%;
+  }
+  .restaurants {
+    padding: 25px;
+  }
+  .restaurants #restaurants_container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  #restaurants_container .width_desktopCard {
-    width: 165%;
+  .restaurants #restaurants_container .width_desktopCard {
+    width: 125%;
   }
-  #restaurants_container .width_desktopCard .width_desktop {
+  .restaurants #restaurants_container .width_desktopCard .width_desktop {
     width: 100%;
+  }
+  .restaurants #restaurants_container img {
+    height: 225px;
   }
 }
 
 /*slogan*/
 .slogan {
-  border: 1px solid transparent;
-  width: 100%;
-  padding: 15px 0px 50px 0px;
+  padding: 25px;
   background-color: #f6f6f6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,14 +197,17 @@ footer li i {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  padding-bottom: 50px;
 }
 
 .slogan h2 {
   font-weight: bold;
+  font-size: 28px;
+  margin-bottom: -10px;
 }
 
 .slogan p {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 100;
 }
 
@@ -202,7 +225,8 @@ footer li i {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 18px;
-  border: 1px solid transparent;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .function h2 {
@@ -213,24 +237,15 @@ footer li i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid transparent;
-}
-
-.function ul {
-  border: 1px solid transparent;
 }
 
 .function ul li {
-  border: 1px solid transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 25px;
   border-radius: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   margin-left: -35px;
   background: #f2f2f2;
   -webkit-box-shadow: #a5a5a5 0 5px 10px;
@@ -263,6 +278,7 @@ footer li i {
 .function ul li i {
   margin: 0 15px 0 0;
   padding: 0;
+  color: grey;
 }
 
 /*Cards des restaurants*/
@@ -275,7 +291,8 @@ footer li i {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #f2f2f2;
-  border: 1px solid transparent;
+  padding: 25px;
+  padding-bottom: 50px;
 }
 
 .restaurants .restaurant_card {
@@ -297,7 +314,7 @@ footer li i {
 
 .restaurants .restaurant_card img {
   width: 100%;
-  height: 300px;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px 15px 0 0;
@@ -313,8 +330,9 @@ footer li i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 25px;
+  background-color: #FFF;
   padding: 0 15px 0 15px;
+  border-radius: 0 0 15px 15px;
 }
 
 .restaurants .restaurant_card .card_description i {
@@ -366,13 +384,15 @@ footer li i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid transparent;
   background-color: #f2f2f2;
   border-radius: 25px 25px 0 0;
   padding-top: 25px;
   padding-left: 15px;
   padding-right: 25px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
+  position: relative;
+  bottom: 50px;
+  margin-bottom: -50px;
 }
 
 .menu .menu_title {
@@ -405,6 +425,22 @@ footer li i {
   transition: 0.5s ease-in-out;
 }
 
+.container {
+  margin-bottom: 35px;
+}
+
+.container h3 {
+  font-weight: 100;
+}
+
+.container h3::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #99e2d0;
+}
+
 .container ul li {
   height: 75px;
   display: -webkit-box;
@@ -417,7 +453,6 @@ footer li i {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: white;
-  border: 1px solid transparent;
   -webkit-box-shadow: 0px 5px 20px rgba(153, 153, 153, 0.3);
           box-shadow: 0px 5px 20px rgba(153, 153, 153, 0.3);
   padding-left: 15px;
@@ -426,8 +461,27 @@ footer li i {
   border-radius: 15px;
 }
 
+.container ul li:hover .li_check {
+  display: block;
+  -webkit-animation: check 0.5s ease-in-out;
+          animation: check 0.5s ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  cursor: pointer;
+}
+
 .container ul li .li_content {
   width: 100%;
+}
+
+.container ul li .li_content h4 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.container ul li .li_content p {
+  font-weight: 100;
+  margin-top: -15px;
 }
 
 .container ul li .li_price {
@@ -438,12 +492,48 @@ footer li i {
 
 .container ul li .li_check {
   border-radius: 0 15px 15px 0;
+  border: 1px solid #99e2d0;
   background-color: #99e2d0;
   padding: 25px;
+  display: none;
+  -webkit-animation: checkout 0.5s ease-in-out;
+          animation: checkout 0.5s ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .container ul li .li_check .fa-check-circle {
   font-size: 25px;
   color: white;
+}
+
+.container,
+.btn_order {
+  animation: fadein 5s;
+  -moz-animation: fadein 5s;
+  /* Firefox */
+  -webkit-animation: fadein 5s;
+  /* Safari et Chrome */
+  -o-animation: fadein 5s;
+  /* Opera */
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

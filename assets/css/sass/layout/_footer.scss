@@ -2,6 +2,9 @@
   footer {
 	background-color: #2e2e2e;
 	z-index: 2;
+	padding-top: 25px;
+	padding-left: 15px;
+	padding-bottom: 25px;
 	a {
 	  font-size: 15px;
 	  color: whitesmoke;
@@ -9,8 +12,9 @@
 	.btn_index {
 	  font-size: 20px;
 	}
+
 	li {
-	  margin: 10px 0 10px 0;
+	  margin: 10px 0 10px -35px;
 	  i {
 		margin-right: 15px;
 	  }

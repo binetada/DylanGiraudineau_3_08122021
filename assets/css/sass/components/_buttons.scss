@@ -26,4 +26,7 @@
   }
   .btn_order {
 	@extend .btn;
+	align-self: center;
+	padding-left: 50px;
+	padding-right: 50px;
   }

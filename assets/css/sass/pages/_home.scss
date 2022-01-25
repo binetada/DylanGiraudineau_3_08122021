@@ -2,38 +2,49 @@
 
 @media (min-width: 992px) {
 	.main_index {
+    width: 100%;
 	  display: flex;
+    #desktop_flex {
+      width: 50%;
+    } 
 	}
+  .restaurants {
+    padding: 25px;
 	#restaurants_container {
-	  padding-left: 50px;
 	  display: flex;
 	  flex-wrap: wrap;
-	  .width_desktopCard {
-		width: 165%;
-		.width_desktop {
-		  width: 100%;
-		}
-	  }
+    
+    .width_desktopCard {
+      width: 125%;
+      .width_desktop {
+        width: 100%;
+      }
+    }
+    img {
+      height: 225px;
+    }
 	}
-  }
+}
+}
 
     /*slogan*/
   
     .slogan {
-        border: 1px solid $linerWork;
-        width: 100%;
-        padding: 15px 0px 50px 0px;
+        padding: 25px;
         background-color: #f6f6f6;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding-bottom: 50px;
         h2 {
           font-weight: bold;
+          font-size: 28px;
+          margin-bottom: -10px;
         }
         p {
-          font-size: 18px;
+          font-size: 20px;
           font-weight: 100;
         }
       }
@@ -46,22 +57,19 @@
         flex-direction: column;
         justify-content: center;
         font-size: 18px;
-        border: 1px solid $linerWork;
+        padding-top: 30px;
+        padding-bottom: 30px;
         h2 {
           width: 100%;
           display: flex;
           align-items: center;
-          border: 1px solid $linerWork;
         }
         ul {
-          border: 1px solid $linerWork;
           li {
-            border: 1px solid $linerWork;
-            display: flex;
-            align-items: center;
+            display: flex;         
             padding: 25px;
             border-radius: 15px;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
             margin-left: -35px;
             background: #f2f2f2;
             box-shadow: #a5a5a5 0 5px 10px;
@@ -87,6 +95,7 @@
             i {
               margin: 0 15px 0 0;
               padding: 0;
+              color: grey;
             }
           }
         }
@@ -96,7 +105,8 @@
         display: flex;
         flex-direction: column;
         background-color: #f2f2f2;
-        border: 1px solid $linerWork;
+        padding: 25px;
+        padding-bottom: 50px;
         .restaurant_card {
           width: 100%;
           display: flex;
@@ -108,7 +118,7 @@
           border: 1px solid $linerWork;
           img {
             width: 100%;
-            height: 300px;
+            height: 250px;
             object-fit: cover;
             border-radius: 15px 15px 0 0;
           }
@@ -116,8 +126,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 25px;
+            background-color: #FFF;
             padding: 0 15px 0 15px;
+            border-radius: 0 0 15px 15px;
             i {
               font-size: 30px;
               &:hover {
