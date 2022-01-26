@@ -1,4 +1,15 @@
   /*footer*/
+  @media (min-width: 992px) {
+	  footer {
+		  display: flex;
+		  flex-direction: column-reverse;
+		text-align: center;
+		  ul {
+			  display: flex;
+			  justify-content: space-around;
+		  }
+	  }
+  }
   footer {
 	background-color: #2e2e2e;
 	z-index: 2;

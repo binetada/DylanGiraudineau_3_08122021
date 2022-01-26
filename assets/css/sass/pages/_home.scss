@@ -1,155 +1,230 @@
 @import "../sass-utils/variables";
 
 @media (min-width: 992px) {
-	.main_index {
+  .main_index {
     width: 100%;
-	  display: flex;
+    display: flex;
     #desktop_flex {
-      width: 50%;
-    } 
-	}
+
+      width: 35%;
+    }
+  }
   .restaurants {
+    width: 65%;
+
     padding: 25px;
-	#restaurants_container {
-	  display: flex;
-	  flex-wrap: wrap;
-    
-    .width_desktopCard {
-      width: 150%;
-      .width_desktop {
-        width: 100%;
+    #restaurants_container {
+      display: flex;
+     flex-direction: column;
+      justify-content: center;
+      
+      .restaurant_card {
+        width: 75%;
+
+
+      img {
+
+        height: 100px;
       }
     }
-    img {
-      height: 225px;
     }
-	}
+  }
 }
+/*loader*/
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #9356DC;
+  opacity: 0.8;
+  animation: fondu-out 0.1s ease-out;
+  animation-delay: 1.8s;
+  animation-fill-mode: both;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-    /*slogan*/
-  
-    .slogan {
-        padding: 25px;
-        background-color: #f6f6f6;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding-bottom: 50px;
-        h2 {
-          font-weight: bold;
-          font-size: 28px;
-          margin-bottom: -10px;
-        }
-        p {
-          font-size: 20px;
-          font-weight: 100;
+.loader__letter {
+  display: flex;
+  font-family: "Shrikhand", cursive;
+  font-size: 90px;
+  color: whitesmoke;
+  text-shadow: 0 0 7px whitesmoke;
+  animation: load 0.9s linear;
+  animation-iteration-count: 2;
+
+  &:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+}
+@keyframes load {
+  0% {
+    color: whitesmoke;
+    text-shadow: 0 0 7px whitesmoke;
+  }
+
+  80% {
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
+  }
+
+  100% {
+    color: whitesmoke;
+    text-shadow: 0 0 7px whitesmoke;
+  }
+}
+
+@keyframes fondu-out {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+/*slogan*/
+
+.slogan {
+  padding: 25px;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 50px;
+  h2 {
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: -10px;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 100;
+  }
+}
+
+/*fontionnement du site*/
+
+.function {
+  padding-left: 18px;
+  padding-right: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  ul {
+    margin-top: 0px;
+    li {
+      display: flex;
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+      margin-left: -35px;
+      background: #f2f2f2;
+      box-shadow: #a5a5a5 0 5px 10px;
+
+      &:hover {
+        background-color: #e9d9ff;
+        transition: 0.3s ease-in;
+      }
+      &:hover i {
+        color: $primary;
+        transition: 0.3s ease-in-out;
+      }
+      .number {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background: $primary;
+        padding: 5px 10px 5px 10px;
+        margin-right: 15px;
+        margin-left: -35px;
+        color: whitesmoke;
+      }
+      i {
+        margin: 0 15px 0 0;
+        padding: 0;
+        color: grey;
+      }
+    }
+  }
+}
+/*Cards des restaurants*/
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  padding: 25px;
+  padding-bottom: 50px;
+  h2 {
+    margin-bottom: 5px;
+  }
+  .restaurant_card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(153, 153, 153, 0.3);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    h3 {
+      margin: 0px;
+      margin-top: 8px;
+    }
+    p {
+      margin: 0px;
+    }
+    img {
+      width: 100%;
+      height: 175px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+    }
+    .card_description {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 10px 15px 10px 15px;
+      border-radius: 0 0 15px 15px;
+      i {
+        font-size: 30px;
+        &:hover {
+          font-weight: 900;
+          background: -webkit-linear-gradient($secondary, $primary);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: 0.6s ease-in;
         }
       }
-      
-      /*fontionnement du site*/
-      
-      .function {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        font-size: 18px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        h2 {
-          width: 100%;
-          display: flex;
-          align-items: center;
-        }
-        ul {
-          li {
-            display: flex;         
-            padding: 25px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            margin-left: -35px;
-            background: #f2f2f2;
-            box-shadow: #a5a5a5 0 5px 10px;
-      
-            &:hover {
-              background-color: #e9d9ff;
-              transition: 0.3s ease-in;
-            }
-            &:hover i {
-              color: $primary;
-              transition: 0.3s ease-in-out;
-            }
-            .number {
-              width: 40px;
-              height: 40px;
-              border-radius: 20px;
-              background: $primary;
-              padding: 5px 10px 5px 10px;
-              margin-right: 15px;
-              margin-left: -35px;
-              color: whitesmoke;
-            }
-            i {
-              margin: 0 15px 0 0;
-              padding: 0;
-              color: grey;
-            }
-          }
-        }
-      }
-      /*Cards des restaurants*/
-      .restaurants {
-        display: flex;
-        flex-direction: column;
-        background-color: #f2f2f2;
-        padding: 25px;
-        padding-bottom: 50px;
-        .restaurant_card {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          border-radius: 15px;
-          box-shadow: 0px 5px 20px rgba(153, 153, 153, 0.3);
-          margin-top: 15px;
-          margin-bottom: 15px;
-          border: 1px solid $linerWork;
-          img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 15px 15px 0 0;
-          }
-          .card_description {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #FFF;
-            padding: 0 15px 0 15px;
-            border-radius: 0 0 15px 15px;
-            i {
-              font-size: 30px;
-              &:hover {
-                font-weight: 900;
-                background: -webkit-linear-gradient($secondary, $primary);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                transition: 0.6s ease-in;
-              }
-            }
-          }
-          .restaurant_cardNew {
-            align-self: flex-end;
-            background-color: $tertiary;
-            border-radius: 5px;
-            color: #5f867c;
-            font-weight: bold;
-            font-size: 18px;
-            position: absolute;
-            margin: 15px;
-            padding: 0px 10px;
-          }
-        }
-      }
+    }
+    .restaurant_cardNew {
+      align-self: flex-end;
+      background-color: $tertiary;
+      border-radius: 5px;
+      color: #5f867c;
+      font-weight: bold;
+      font-size: 18px;
+      position: absolute;
+      margin: 15px;
+      padding: 5px 10px 5px 10px;
+      p {
+        margin: 0px; 
+      } 
+    }
+  }
+}
