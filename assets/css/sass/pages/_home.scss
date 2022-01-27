@@ -5,28 +5,16 @@
     width: 100%;
     display: flex;
     #desktop_flex {
-
       width: 35%;
     }
   }
   .restaurants {
     width: 65%;
-
     padding: 25px;
     #restaurants_container {
       display: flex;
-     flex-direction: column;
-      justify-content: center;
-      
-      .restaurant_card {
-        width: 75%;
-
-
-      img {
-
-        height: 100px;
-      }
-    }
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
   }
 }

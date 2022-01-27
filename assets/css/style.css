@@ -189,19 +189,11 @@ footer li i {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .restaurants #restaurants_container .restaurant_card {
-    width: 75%;
-  }
-  .restaurants #restaurants_container .restaurant_card img {
-    height: 100px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -583,6 +575,10 @@ footer li i {
   transition: 0.5s ease-in-out;
 }
 
+.container_E, .container_P {
+  padding-bottom: 15px;
+}
+
 .container {
   margin-bottom: 35px;
 }
@@ -641,18 +637,23 @@ footer li i {
 .container ul li .li_content h4 {
   font-size: 18px;
   font-weight: normal;
+  margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .container ul li .li_content p {
   font-weight: 100;
-  margin-top: -15px;
+  padding-top: 5px;
+  margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .container ul li .li_price {
-  height: 75px;
-  padding-top: 50px;
-  padding-right: 15px;
-  margin-right: -45px;
+  padding-top: 25px;
+  padding-left: 10px;
+  margin-right: -25px;
 }
 
 .container ul li .li_check {

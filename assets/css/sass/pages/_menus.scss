@@ -54,6 +54,9 @@
 	  }
 	}
   }
+  .container_E, .container_P {
+	padding-bottom: 15px;
+}
   .container {
 	margin-bottom: 35px;
 	h3 {
@@ -92,23 +95,28 @@
 		  width: 100%;
 		  white-space: nowrap;
 		  overflow: hidden;
-		  text-overflow: ellipsis;
+  		  text-overflow: ellipsis;
 		  h4 {
 			font-size: 18px;
 			font-weight: normal;
+			margin: 0px;
+			overflow: hidden;
+  		    text-overflow: ellipsis;
 		  }
 		  p {
 			font-weight: 100;
-			margin-top: -15px;
+			padding-top: 5px;
+			margin: 0px;
+			overflow: hidden;
+  		    text-overflow: ellipsis;
 		  }
 		}
 		.li_price {
-		  height: 75px;
-		  padding-top: 50px;
-		  padding-right: 15px;
-		  margin-right: -45px;
+		  padding-top: 25px;
+		  padding-left: 10px; 
+		  margin-right: -25px;
 		}
-		.li_check {
+		.li_check {	
 		  width: 0px;
 		  border-radius: 0 15px 15px 0;
 		  background-color: transparent;
