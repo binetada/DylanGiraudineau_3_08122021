@@ -125,26 +125,6 @@ header .index_back {
 }
 
 /*footer*/
-@media (min-width: 992px) {
-  footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    text-align: center;
-  }
-  footer ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-
 footer {
   background-color: #2e2e2e;
   z-index: 2;
@@ -172,18 +152,9 @@ footer li i {
 
 /*déclaration des variables*/
 @media (min-width: 992px) {
-  .main_index {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .main_index #desktop_flex {
-    width: 35%;
-  }
   .restaurants {
-    width: 65%;
     padding: 25px;
+    text-align: center;
   }
   .restaurants #restaurants_container {
     display: -webkit-box;
@@ -194,6 +165,19 @@ footer li i {
             justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .restaurants #restaurants_container .description_txt {
+    margin-right: 55px;
+  }
+  .function {
+    text-align: center;
+  }
+  .function ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -416,7 +400,6 @@ footer li i {
 }
 
 .restaurants .restaurant_card {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,7 +424,6 @@ footer li i {
 }
 
 .restaurants .restaurant_card img {
-  width: 100%;
   height: 175px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -482,8 +464,8 @@ footer li i {
   background-color: #99e2d0;
   border-radius: 5px;
   color: #5f867c;
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: normal;
+  font-size: 16px;
   position: absolute;
   margin: 15px;
   padding: 5px 10px 5px 10px;
@@ -501,12 +483,6 @@ footer li i {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-  }
-  .container ul {
-    width: 100%;
-  }
-  .container ul li {
-    width: 100%;
   }
 }
 
@@ -568,11 +544,8 @@ footer li i {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: fondu-in 0.5s ease-in-out;
-          animation: fondu-in 0.5s ease-in-out;
   -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
   -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
 }
 
 .container_E, .container_P {
@@ -624,7 +597,6 @@ footer li i {
 
 .container ul li:hover .fa-check-circle {
   -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
 }
 
 .container ul li .li_content {
@@ -662,16 +634,12 @@ footer li i {
   background-color: transparent;
   padding: 25px;
   -webkit-transition: width 0.5s;
-  transition: width 0.5s;
 }
 
 .container ul li .li_check .fa-check-circle {
   font-size: 25px;
   color: white;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: transform 0.5s;
 }
 
 .menu::before {

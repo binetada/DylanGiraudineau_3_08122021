@@ -1,21 +1,24 @@
 @import "../sass-utils/variables";
 
 @media (min-width: 992px) {
-  .main_index {
-    width: 100%;
-    display: flex;
-    #desktop_flex {
-      width: 35%;
-    }
-  }
   .restaurants {
-    width: 65%;
     padding: 25px;
+    text-align: center;
     #restaurants_container {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+        .description_txt {
+          margin-right: 55px;
+        }
     }
+  }
+  .function {
+    text-align: center;
+    ul {
+    display: flex;
+    justify-content: space-around;
+  }
   }
 }
 /*loader*/
@@ -162,7 +165,6 @@
     margin-bottom: 5px;
   }
   .restaurant_card {
-    width: 100%;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
@@ -177,7 +179,7 @@
       margin: 0px;
     }
     img {
-      width: 100%;
+      
       height: 175px;
       object-fit: cover;
       border-radius: 15px 15px 0 0;
@@ -205,8 +207,8 @@
       background-color: $tertiary;
       border-radius: 5px;
       color: #5f867c;
-      font-weight: bold;
-      font-size: 18px;
+      font-weight: normal;
+      font-size: 16px;
       position: absolute;
       margin: 15px;
       padding: 5px 10px 5px 10px;

@@ -3,12 +3,7 @@
 	.container {
 	  display: flex;
 	  justify-content: space-around;
-	  ul {
-		width: 100%;
-		li {
-		  width: 100%;
-		}
-	  }
+
 	}
   }
   /*bannière*/
@@ -47,9 +42,9 @@
 		  background: -webkit-linear-gradient(#ff79da, #9356dc);
 		  -webkit-background-clip: text;
 		  -webkit-text-fill-color: transparent;
-		  animation: fondu-in 0.5s ease-in-out;
-		  animation-delay: 0.1s;
-		  transition: 0.5s ease-in-out;
+		  -webkit-animation: fondu-in 0.5s ease-in-out;
+		  -webkit-animation-delay: 0.1s;
+		  -webkit-transition: 0.5s ease-in-out;
 		}
 	  }
 	}
@@ -88,7 +83,7 @@
 		  margin-left: 45px;
 		}
 		&:hover .fa-check-circle {
-		  transform: rotate(360deg);
+			-webkit-transform: rotate(360deg);
 		}
   
 		.li_content {
@@ -121,11 +116,11 @@
 		  border-radius: 0 15px 15px 0;
 		  background-color: transparent;
 		  padding: 25px;
-		  transition: width 0.5s;
+		  -webkit-transition: width 0.5s;
 		  .fa-check-circle {
 			font-size: 25px;
 			color: white;
-			transition: transform 0.5s;
+			-webkit-transition: transform 0.5s;
 		  }
 		}
 	  }
