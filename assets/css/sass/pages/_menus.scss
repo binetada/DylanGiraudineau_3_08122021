@@ -1,9 +1,9 @@
 /*pages menus restaurants*/
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
 	.container {
 	  display: flex;
-	  justify-content: space-around;
-
+	  justify-content: space-between;
+	  flex-wrap: wrap;
 	}
   }
   /*bannière*/
