@@ -38,13 +38,11 @@
 		font-size: 30px;
 		cursor: pointer;
 		&:hover {
-		  font-weight: 900;
-		  background: -webkit-linear-gradient(#ff79da, #9356dc);
-		  -webkit-background-clip: text;
-		  -webkit-text-fill-color: transparent;
-		  -webkit-animation: fondu-in 0.5s ease-in-out;
-		  -webkit-animation-delay: 0.1s;
-		  -webkit-transition: 0.5s ease-in-out;
+			background: linear-gradient($primary, $secondary);
+			font-weight: 900;
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+		  transition: 0.5s ease-in;
 		}
 	  }
 	}
@@ -126,11 +124,8 @@
 	  }
 	}
   }
-  .menu::before {
-	animation: opacity 1.6 linear forwards;
-  }
   li, .btn_order {
-	animation: up-opacity 400ms ease-in-out backwards;
+	animation: up-opacity 400ms backwards;
   }
   .li_animation-1 {
 	animation-delay: 200ms;
@@ -165,26 +160,13 @@
   .btn_order {
 	animation-delay: 1300ms;
   }
-  @keyframes opacity {
-	0% {
-	  opacity: 1;
-	}
-	99.9% {
-	  z-index: 10;
-	}
-	100% {
-	  opacity: 0;
-	  z-index: -9999;
-	}
-  }
+
   @keyframes up-opacity {
 	from {
-	  opacity: 0;
-	  transform: translateY(10px);
+	  opacity: 0;  
 	}
 	to {
 	  opacity: 1;
-	  transform: translateY(0px);
 	}
   }
   

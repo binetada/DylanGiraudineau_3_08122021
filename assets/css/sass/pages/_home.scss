@@ -194,11 +194,11 @@
       i {
         font-size: 30px;
         &:hover {
+          background: linear-gradient($primary, $secondary);
           font-weight: 900;
-          background: -webkit-linear-gradient($secondary, $primary);
-          -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          transition: 0.6s ease-in;
+          -webkit-background-clip: text;
+        transition: 0.5s ease-in;
         }
       }
     }
